@@ -461,7 +461,8 @@ fn new_project(name: &str, rest: &[String]) -> Result<Value, String> {
     std::fs::create_dir_all(dir.join("src")).map_err(|e| e.to_string())?;
     let engine = env!("CARGO_MANIFEST_DIR");
     // a local checkout of the engine is used directly; an installed binary points the project at GitHub
-    let dep = if Path::new(engine).join(".git").exists() || std::env::var("LSD_RS_PATH").is_ok() {
+    let installed = engine.contains("/.cargo/git/checkouts/") || engine.contains("/.cargo/registry/");
+    let dep = if (!installed && Path::new(engine).join("Cargo.toml").exists()) || std::env::var("LSD_RS_PATH").is_ok() {
         format!("lsd = {{ path = \"{}\" }}", std::env::var("LSD_RS_PATH").unwrap_or_else(|_| engine.to_string()))
     } else {
         "lsd = { git = \"https://github.com/RJuro/lsd-rs\" }".to_string()

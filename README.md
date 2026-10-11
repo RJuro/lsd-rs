@@ -36,6 +36,9 @@ lsd-rs models
 
 The binary is `lsd-rs`, so it doesn't clash with the `lsd` file lister.
 
+If your git rewrites GitHub URLs to SSH and `cargo install` fails with "no authentication methods succeeded",
+run it with `CARGO_NET_GIT_FETCH_WITH_CLI=true`.
+
 ## Use it from an agent
 
 ```bash
