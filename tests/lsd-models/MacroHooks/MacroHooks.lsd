@@ -1,0 +1,53 @@
+	
+Label Root
+{
+	Son: Firm
+	Label Firm
+	{
+		Son: Worker
+		Label Worker
+		{
+			Var: Hist
+			Var: Stat
+			Param: Id
+			Param: Rec
+		}
+
+		Var: Boss
+		Param: Level
+		Param: NextId
+		Param: Rec
+	}
+
+	Param: Top
+	Param: Rec
+}
+
+
+DATA
+
+Object: Root C	1
+Param: Top 0 n + n n	99
+Param: Rec 0 n + n n	0
+
+Object: Firm C	3
+Var: Boss 0 n + n n
+Param: Level 0 n + n n	10	20	30
+Param: NextId 0 n + n n	100	200	300
+Param: Rec 0 n + n n	0	0	0
+
+Object: Worker C	4	3	5
+Var: Hist 0 n + n n
+Var: Stat 0 n + n n
+Param: Id 0 n + n n	1	2	3	4	5	6	7	8	9	10	11	12
+Param: Rec 0 n + n n	0	0	0	0	0	0	0	0	0	0	0	0
+
+SIM_NUM 1
+SEED 1
+MAX_STEP 40
+EQUATION fun_MacroHooks.cpp
+MODELREPORT report_MacroHooks.html
+
+DESCRIPTION
+
+END_DESCRIPTION

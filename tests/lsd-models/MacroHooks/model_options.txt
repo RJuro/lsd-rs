@@ -1,0 +1,3 @@
+TARGET=LSD
+FUN=fun_MacroHooks
+SWITCH_CC=-g

@@ -1,0 +1,3 @@
+TARGET=LSD
+FUN=fun_MacroSearchFast
+SWITCH_CC=-g

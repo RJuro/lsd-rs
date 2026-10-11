@@ -1,0 +1,20 @@
+[package]
+name = "lsd"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust reimplementation of the LSD (Laboratory for Simulation Development) engine, compat mode"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/RJuro/lsd-rs"
+readme = "README.md"
+keywords = ["agent-based-model", "simulation", "lsd", "economics", "mcp"]
+categories = ["simulation", "science", "command-line-utilities"]
+
+[[bin]]
+name = "lsd-rs"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[profile.release]
+debug = 1

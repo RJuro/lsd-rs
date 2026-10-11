@@ -1,0 +1,128 @@
+
+Label Root
+{
+	Son: Region
+	Label Region
+	{
+		Son: Agent
+		Label Agent
+		{
+			Var: AgOps
+			Var: AgSig
+
+		}
+
+		Param: regionId
+		Var: Build
+		Var: Ops
+
+	}
+
+	Var: Setup
+	Var: Report
+
+}
+
+
+DATA
+
+Object: Root C	1
+Var: Setup 0 s + n n
+Var: Report 0 s + n n
+
+Object: Region C	3
+Param: regionId 0 n + n n	1	2	3
+Var: Build 0 s + n n
+Var: Ops 0 s + n n
+
+Object: Agent C	1	3	1
+Var: AgOps 0 s + n n
+Var: AgSig 0 s + n n
+
+SIM_NUM 1
+SEED 1
+MAX_STEP 9
+EQUATION fun_netsops.cpp
+MODELREPORT modelreport.html
+
+DESCRIPTION
+
+Object_Root
+(no description available)
+END_DESCRIPTION
+
+Object_Region
+(no description available )
+_INIT_
+
+END_DESCRIPTION
+
+Object_Agent
+(no description available )
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Setup
+Write the Pajek file loaded by region 2
+
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Report
+Statistics of the network of every region
+
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_regionId
+Region number (4 for the copy)
+
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Build
+Create the network of the region
+
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Ops
+Operations on the network of the region
+
+_INIT_
+
+END_DESCRIPTION
+
+Variable_AgOps
+Operations of a node
+
+_INIT_
+
+END_DESCRIPTION
+
+Variable_AgSig
+Signature of a node
+
+_INIT_
+
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+Root
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+END_EQ_FILE

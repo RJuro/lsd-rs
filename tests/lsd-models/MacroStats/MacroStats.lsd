@@ -1,0 +1,57 @@
+	
+Label Root
+{
+	Son: Group
+	Label Group
+	{
+		Son: Item
+		Label Item
+		{
+			Var: X
+			Var: Y
+			Var: N
+			Param: W
+			Param: Cat
+			Var: IStats
+			Param: Rec
+		}
+
+		Var: GStats
+		Var: Zs
+		Param: Rec
+	}
+
+	Var: RStats
+	Param: Rec
+}
+
+
+DATA
+
+Object: Root C	1
+Var: RStats 0 n + n n
+Param: Rec 0 n + n n	0
+
+Object: Group C	3
+Var: GStats 0 n + n n
+Var: Zs 1 s + n n	0	0	0
+Param: Rec 0 n + n n	0	0	0
+
+Object: Item C	5	9	13
+Var: X 3 n + n n	3	6	4	6	6	3	3	4	6	4	1	1	6	4	3	5	4	6	1	0	3	2	1	0	4	6	5	5	0	4	3	3	5	5	4	5	1	4	0	6	4	0	0	0	1	1	4	0	6	3	2	3	4	6	1	4	1	5	2	3	0	5	0	3	5	2	3	4	6	0	5	2	2	6	1	4	2	0	0	4	6
+Var: Y 2 n + n n	1.08	1.08	2.91	0.67	0.17	6.85	2.14	9.27	0.52	3.75	7.09	4.20	5.66	1.98	6.75	3.37	3.11	0.15	4.10	9.23	1.35	7.07	0.11	4.65	4.87	6.82	1.88	5.09	9.85	7.70	4.19	3.84	3.95	9.90	0.00	8.64	9.75	5.93	9.98	0.20	1.87	9.96	6.02	5.77	0.42	1.46	4.42	0.10	6.10	8.30	3.86	0.74	2.09	6.37
+Var: N 0 n + n n
+Param: W 0 n + n n	1	3	3	4	2	4	2	4	2	2	3	2	2	2	2	2	4	4	1	4	1	1	1	1	3	2	4
+Param: Cat 0 n + n n	2	2	3	2	2	3	1	3	1	1	1	2	3	3	3	3	1	2	1	1	3	1	1	2	2	2	1
+Var: IStats 0 n + n n
+Param: Rec 0 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+SIM_NUM 1
+SEED 1
+MAX_STEP 100
+EQUATION fun_MacroStats.cpp
+MODELREPORT report_MacroStats.html
+
+DESCRIPTION
+
+END_DESCRIPTION

@@ -1,0 +1,3 @@
+TARGET=LSD
+FUN=fun_MacroStats
+SWITCH_CC=-g
